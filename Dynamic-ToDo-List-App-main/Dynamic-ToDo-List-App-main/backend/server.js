@@ -27,6 +27,17 @@ const taskSchema = new mongoose.Schema({
 
 const Task = mongoose.model('Task', taskSchema);
 
+// GET all tasks endpoint
+app.get('/tasks', async (req, res) => {
+    try {
+        const tasks = await Task.find();
+        res.json(tasks);
+    } catch (error) {
+        console.error('Error fetching tasks:', error);
+        res.status(500).json({ message: 'Error fetching tasks' });
+    }
+});
+
 // Routes
 app.post('/tasks', async (req, res) => {
     const tasks = await Task.find();

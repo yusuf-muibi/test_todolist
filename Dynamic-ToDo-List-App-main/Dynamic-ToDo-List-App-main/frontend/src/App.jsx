@@ -58,7 +58,7 @@ const App = () => {
     return (
         <div className="min-h-screen bg-indigo-50 flex flex-col items-center py-10">
             <h1 className="text-4xl font-extrabold text-gray-800 mb-4">Dynamic To-Do List</h1>
-            <h2 className="text-lg font-medium text-gray-600 mb-10">By Sharaneshwar Punjal</h2>
+            <h2 className="text-lg font-medium text-gray-600 mb-10">By Owolabi Oluwasemilogo and Yusuf Muibi</h2>
             <TaskForm addTask={addTask} />
             <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
                 <div className="flex justify-center gap-10 mb-10 w-full px-5">
